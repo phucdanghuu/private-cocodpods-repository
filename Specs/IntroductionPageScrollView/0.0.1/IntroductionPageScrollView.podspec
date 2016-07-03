@@ -91,8 +91,8 @@ s.source       = { :git => "https://ttkien@bitbucket.org/kientranprivate/introdu
 #  Not including the public_header_files will make all headers public.
 #
 
-s.source_files  = "IntroductionPageScrollView", "IntroductionPageScrollView/**/*.{h,m}"
-s.exclude_files = "example"
+s.source_files  = "IntroductionPageScrollView/**/*.{h,m,swift}"
+s.exclude_files = "example", "IntroductionPageScrollViewTests"
 
 # s.public_header_files = "Classes/**/*.h"
 
