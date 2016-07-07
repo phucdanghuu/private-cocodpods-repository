@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CODataImport"
-  s.version      = "0.3.4"
+  s.version      = "0.5.3.1"
   s.summary      = "A short description of CODataImport."
 
   # This description is used to generate tags and improve search results.
@@ -90,6 +90,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "CODataImport", "CODataImport/**/*.{h,m}"
+  s.exclude_files = "CODataImport/CODataImportUnitTest"
 
   # s.public_header_files = "Classes/**/*.h"
 
