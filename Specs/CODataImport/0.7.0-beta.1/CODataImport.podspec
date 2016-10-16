@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "0.7.0-beta.1"
-  s.version      = "swift.support"
+  s.name         = "CODataImport"
+  s.version      = "0.7.0-beta.1"
   s.summary      = "A short description of CODataImport."
 
   # This description is used to generate tags and improve search results.
