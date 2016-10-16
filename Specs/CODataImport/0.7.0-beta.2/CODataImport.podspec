@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CODataImport"
-  s.version      = "0.7.0-beta.1"
+  s.version      = "0.7.0-beta.2"
   s.summary      = "A short description of CODataImport."
 
   # This description is used to generate tags and improve search results.
