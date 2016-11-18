@@ -132,6 +132,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-    s.dependency = 'MagicalRecord', :git => 'https://ttkien@bitbucket.org/kientranprivate/magicalrecord-watchos.git', :branch => 'watchos_support'
+    s.dependency 'MagicalRecord', '2.3.4'
 
 end
