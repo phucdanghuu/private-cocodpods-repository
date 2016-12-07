@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint TextCryptor.podspec' to ensure this is a
+#  Be sure to run `pod spec lint TextCrypto.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "TextCryptor"
+  s.name         = "TextCrypto"
   s.version      = "0.0.1"
-  s.summary      = "TextCryptor"
+  s.summary      = "TextCrypto"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = "This is a simple class, wrap Cipher classes (https://github.com/krzyzanowskim/CryptoSwift) for encryption/decryption. This class help encrypt a text and encode the results (array of bytes) to base64 string (why is base64 string? please read this post http://stackoverflow.com/questions/27014578/should-i-use-base64-or-unicode-for-storing-hashes-salts)"
 
-  s.homepage     = "https://github.com/ttkien/TextCryptor"
+  s.homepage     = "https://github.com/ttkien/TextCrypto"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-s.source       = { :git => "https://github.com/ttkien/TextCryptor.git", :tag => "#{s.version}", :branch => "master" }
+s.source       = { :git => "https://github.com/ttkien/TextCrypto.git", :tag => "#{s.version}", :branch => "master" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,7 +89,7 @@ s.source       = { :git => "https://github.com/ttkien/TextCryptor.git", :tag => 
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "TextCryptor", "TextCryptor/**/*.{h,m,swift}"
+  s.source_files  = "TextCrypto", "TextCrypto/**/*.{h,m,swift}"
 #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
