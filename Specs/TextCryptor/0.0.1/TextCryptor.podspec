@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = "This is a simple class, wrap Cipher classes (from project https://github.com/krzyzanowskim/CryptoSwift) for encryption/decryption"
+  s.description  = "This is a simple class, wrap Cipher classes (https://github.com/krzyzanowskim/CryptoSwift) for encryption/decryption. This class help encrypt a text and encode the results (array of bytes) to base64 string (why is base64 string? please read this post http://stackoverflow.com/questions/27014578/should-i-use-base64-or-unicode-for-storing-hashes-salts)"
 
   s.homepage     = "https://github.com/ttkien/TextCryptor"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
