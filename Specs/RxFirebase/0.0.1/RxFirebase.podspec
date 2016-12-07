@@ -116,7 +116,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+   s.frameworks = "Security", "Foundation", "FirebaseAuth"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
@@ -130,8 +130,13 @@ Pod::Spec.new do |s|
 
   # s.requires_arc = true
 
-  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+s.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => '$(inherited) "${PODS_ROOT}/FirebaseDatabase/Frameworks" "${PODS_ROOT}/FirebaseCore/Frameworks/frameworks" "${PODS_ROOT}/FirebaseAuth/Frameworks/frameworks" "$PODS_CONFIGURATION_BUILD_DIR/GTMSessionFetcher" "$PODS_CONFIGURATION_BUILD_DIR/GoogleToolboxForMac" "$PODS_CONFIGURATION_BUILD_DIR/RxSwift" "${PODS_ROOT}/FirebaseAnalytics/Frameworks/frameworks" "${PODS_ROOT}/GoogleSymbolUtilities/Frameworks/frameworks" "${PODS_ROOT}/GoogleInterchangeUtilities/Frameworks/frameworks" "${PODS_ROOT}/FirebaseInstanceID/Frameworks/frameworks"', "OTHER_LDFLAGS" => '$(inherited) -ObjC -l"c++" -l"icucore" -l"sqlite3" -l"z" -framework "AddressBook" -framework "CFNetwork" -framework "FirebaseAnalytics" -framework "FirebaseAuth" -framework "FirebaseCore" -framework "FirebaseDatabase" -framework "FirebaseInstanceID" -framework "GTMSessionFetcher" -framework "GoogleInterchangeUtilities" -framework "GoogleSymbolUtilities" -framework "GoogleToolboxForMac" -framework "RxSwift" -framework "Security" -framework "StoreKit" -framework "SystemConfiguration"',
+"HEADER_SEARCH_PATHS" => '$(inherited) ${PODS_ROOT}/Firebase/Core/Sources "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Firebase" "${PODS_ROOT}/Headers/Public/FirebaseAnalytics" "${PODS_ROOT}/Headers/Public/FirebaseCore" "${PODS_ROOT}/Headers/Public/FirebaseDatabase" "${PODS_ROOT}/Headers/Public/FirebaseInstanceID" "${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities" "${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities"'
+
+
+}
   s.dependency "RxSwift" , "~> 3.0"
-  s.dependency 'Firebase/Database'
-  s.dependency 'Firebase/Auth'
+  s.dependency "Firebase/Database"
+  s.dependency "Firebase/Auth"
+
 end
