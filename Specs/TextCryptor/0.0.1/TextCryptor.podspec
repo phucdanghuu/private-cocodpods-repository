@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/ttkien/TextCryptor.git", :commit => "4bd250dc25bb4aec7b895644bf3d3e5495176282" }
+s.source       = { :git => "https://github.com/ttkien/TextCryptor.git", :tag => "{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
