@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CODataImport"
-  s.version      = "0.4.1"
+  s.version      = "1.0.0-beta.1"
   s.summary      = "A short description of CODataImport."
 
   # This description is used to generate tags and improve search results.
@@ -63,13 +63,13 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-   s.platform     = :ios, "7.0"
+#s.platform     = :ios, "7.0"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
-  # s.osx.deployment_target = "10.7"
-  # s.watchos.deployment_target = "2.0"
-  # s.tvos.deployment_target = "9.0"
+   s.ios.deployment_target = "8.0"
+#  s.osx.deployment_target = "10.7"
+ s.watchos.deployment_target = "2.0"
+#  s.tvos.deployment_target = "9.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://gitlab.cogini.com/kien.tran/gdcoredataimport.git", :branch => "master" ,:tag => "#{s.version}" }
+  s.source       = { :git => "https://gitlab.cogini.com/kien.tran/gdcoredataimport.git", :branch => "watch_os" ,:tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,8 +89,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "CODataImport", "CODataImport/**/*.{h,m}"
-  s.exclude_files = "CODataImport/CODataImportUnitTest"
+  s.source_files  = "CODataImport", "CODataImport/CODataImport**/*.{h,m}"
+  s.exclude_files = "CODataImport/CODataImportUnitTest", "CODataImport/Pods"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -132,5 +132,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency 'MagicalRecord', '~> 2.3'
+    s.dependency 'MagicalRecord', '2.3.4'
+
 end

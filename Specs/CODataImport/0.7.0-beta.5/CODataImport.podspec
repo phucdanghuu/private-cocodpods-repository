@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CODataImport"
-  s.version      = "0.5.2"
+  s.version      = "0.7.0-beta.5"
   s.summary      = "A short description of CODataImport."
 
   # This description is used to generate tags and improve search results.
@@ -89,8 +89,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "CODataImport", "CODataImport/**/*.{h,m}"
-  s.exclude_files = "CODataImport/CODataImportUnitTest"
+  s.source_files  = "CODataImport", "CODataImport/CODataImport**/*.{h,m}"
+  s.exclude_files = "CODataImport/CODataImportUnitTest", "CODataImport/Pods"
 
   # s.public_header_files = "Classes/**/*.h"
 

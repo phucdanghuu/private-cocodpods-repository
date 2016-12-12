@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint CODataImport.podspec' to ensure this is a
+#  Be sure to run `pod spec lint DataImport.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
@@ -15,18 +15,18 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "CODataImport"
-  s.version      = "0.5.3"
-  s.summary      = "A short description of CODataImport."
+  s.name         = "DataImport"
+  s.version      = "0.0.1"
+  s.summary      = "Help import from Dictionry to NSManagedObject"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = "A short description of CODataImport."
+s.description  = "The library helps to import Dictionary [key:value] to NSManagedObject with the specific NSManagedObjectContext"
 
-  s.homepage     = "http://EXAMPLE/CODataImport"
+  s.homepage     = "https://www.facebook.com/ttkien.it"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -37,7 +37,20 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "BSD"
+s.license      = { :type => 'Apache License, Version 2.0', :text => <<-LICENSE
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+LICENSE
+}
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -51,9 +64,9 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "Tran Kien" => "Kien Tran" }
+  s.author             = { "Tran Kien" => "kien.tran@cogini.com" }
   # Or just: s.author    = "Tran Kien"
-  # s.authors            = { "Tran Kien" => "Kien Tran" }
+  # s.authors            = { "Tran Kien" => "kien.tran@cogini.com" }
   # s.social_media_url   = "http://twitter.com/Tran Kien"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -63,10 +76,10 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-   s.platform     = :ios, "7.0"
+  # s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
+   s.ios.deployment_target = "8.0"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
@@ -78,7 +91,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://gitlab.cogini.com/kien.tran/gdcoredataimport.git", :branch => "master" ,:tag => "#{s.version}" }
+  s.source       = { :git => "https://gitlab.cogini.com/kien.tran/DataImport.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,10 +102,10 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "CODataImport", "CODataImport/**/*.{h,m}"
-  s.exclude_files = "CODataImport/CODataImportUnitTest"
+  s.source_files  = "DataImport", "DataImport/**/*.{h,m,swift}"
+  s.exclude_files = "DataImport/DataImportTests"
 
-  # s.public_header_files = "Classes/**/*.h"
+   s.public_header_files = "DataImport/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -115,9 +128,8 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.frameworks = 'UIKit', 'CoreData'
-
-# s.frameworks = "SomeFramework", "AnotherFramework"
+   s.framework  = "CoreData"
+  # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
@@ -129,8 +141,9 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  s.requires_arc = true
+  # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency 'MagicalRecord', '~> 2.3'
+    s.dependency 'MagicalRecord', '~> 2.3'
+
 end
