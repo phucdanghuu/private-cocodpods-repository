@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SwiftAlgorithm"
-  s.version      = "0.0.6"
+  s.version      = "0.0.7"
   s.summary      = "Swift algorithms."
 
   # This description is used to generate tags and improve search results.
@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "SwiftAlgorithm", "SwiftAlgorithm/**/*.{h,m,swift}"
-  s.exclude_files = "SwiftAlgorithm/**/*.{playground}"
+  s.exclude_files = "SwiftAlgorithm/**/*Test*.*"
 
   s.public_header_files = "SwiftAlgorithm/**/*.h"
 
