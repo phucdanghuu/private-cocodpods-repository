@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "SwiftAlgorithm", "SwiftAlgorithm/**/*.{h,m,swift}"
-  s.exclude_files = "SwiftAlgorithm/Exclude"
+  s.exclude_files = "SwiftAlgorithm/**/*.{playground}"
 
   s.public_header_files = "SwiftAlgorithm/**/*.h"
 
