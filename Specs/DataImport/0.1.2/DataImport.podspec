@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DataImport"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "Help import from Dictionry to NSManagedObject"
 
   # This description is used to generate tags and improve search results.
@@ -91,7 +91,7 @@ LICENSE
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://gitlab.cogini.com/kien.tran/DataImport.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://gitlab.cogini.com/kien.tran/DataImport.git", :branch => "rxswift" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -102,8 +102,8 @@ LICENSE
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "DataImport", "DataImport/**/*.{h,m,swift}"
-  s.exclude_files = "DataImport/DataImportTests"
+  s.source_files  = "DataImport/DataImport/**/*.{h,m,swift}"
+  s.exclude_files = "DataImport/DataImportTests","DataImport/RxDataImportTests"
 
    s.public_header_files = "DataImport/**/*.h"
 
@@ -147,9 +147,10 @@ LICENSE
     s.dependency 'MagicalRecord', '~> 2.3'
 
     s.subspec "RxSwift" do |ss|
-        ss.source_files = "Sources/RxMoya/"
-        ss.dependency "Moya/Core"
+        ss.source_files = "DataImport/RxDataImport", "DataImport/DataImport/**/*.{h,m,swift}"
         ss.dependency "RxSwift", "~> 3.0"
+        ss.framework  = "CoreData"
+
     end
 
 end
