@@ -137,6 +137,10 @@ Pod::Spec.new do |s|
     s.subspec "RxSwift" do |ss|
         ss.source_files = "HttpClient", "HttpClient/**/*.{h,m,swift}", "RxSwift", "RxSwift/**/*.{h,m,swift}"
         ss.dependency "RxSwift", "~> 3.0"
+        ss.dependency "RxAlamofire"
+        ss.dependency 'SWXMLHash' 
+
+
     end
 
 end
