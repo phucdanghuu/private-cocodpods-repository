@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://ttkien@bitbucket.org/kientranprivate/httpclient.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://ttkien@bitbucket.org/kientranprivate/httpclient.git", :commit => "afe9aec1c3a316175db569760bb404cc9fc1f06e" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
