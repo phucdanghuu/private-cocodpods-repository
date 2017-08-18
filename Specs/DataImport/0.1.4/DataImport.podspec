@@ -143,7 +143,8 @@ LICENSE
     s.dependency 'MagicalRecord', '~> 2.3'
 
     s.subspec "RxSwift" do |ss|
-        s.ios.vendored_frameworks = "RxDataImport.framework"
+        ss.ios.vendored_frameworks = "RxDataImport.framework"
+        ss.ios.deployment_target = "8.0"
 
         ss.dependency "RxSwift", "~> 3.0"
         ss.framework  = "CoreData"
