@@ -91,7 +91,7 @@ LICENSE
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-    s.source       = { :git => "https://gitlab.cogini.com/kien.tran/DataImport.git", :branch => "rxswift", :tag => "0.1.3" }
+    s.source       = { :http => "https://bitbucket.org/ttkien/private-cocodpods-repository/raw/349eb2e04376a935b0d55dfa0c087a903112b4b3/Specs/DataImport/0.1.4/DataImport.zip"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -102,12 +102,7 @@ LICENSE
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "DataImport/DataImport/**/*.{h,m,swift}"
-  s.exclude_files = "DataImport/DataImportTests","DataImport/RxDataImportTests"
-
-   s.public_header_files = "DataImport/**/*.h"
-
-
+  
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  A list of resources included with the Pod. These are copied into the
@@ -130,7 +125,8 @@ LICENSE
 
    s.framework  = "CoreData"
   # s.frameworks = "SomeFramework", "AnotherFramework"
-
+    
+   s.ios.vendored_frameworks = "DataImport.framework"
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
 
@@ -147,10 +143,11 @@ LICENSE
     s.dependency 'MagicalRecord', '~> 2.3'
 
     s.subspec "RxSwift" do |ss|
-        ss.source_files = "DataImport/RxDataImport", "DataImport/DataImport/**/*.{h,m,swift}"
+        ss.ios.vendored_frameworks = "RxDataImport.framework"
+        ss.ios.deployment_target = "8.0"
+
         ss.dependency "RxSwift", "~> 3.0"
         ss.framework  = "CoreData"
 
     end
-
 end
