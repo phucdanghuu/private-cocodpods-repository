@@ -144,7 +144,7 @@ s.framework  = "CoreData"
 # s.requires_arc = true
 
 # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-s.dependency 'MagicalRecord', '~> 2.3'
+s.dependency 'MagicalRecord', '2.3'
 
 s.subspec "RxSwift" do |ss|
 ss.source_files = "DataImport/RxDataImport", "DataImport/DataImport/**/*.{h,m,swift}"
