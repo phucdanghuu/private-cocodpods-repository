@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://ttkien@bitbucket.org/kientranprivate/httpclient.git", :tag => "4.0.1" }
+  s.source       = { :git => "https://gitlab.cogini.com/kien.tran/restfulclient.git", :tag => "4.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
